@@ -1,5 +1,9 @@
-head {
-    background-color: #FF0000;
-    height: 70px;
+header {
+    background-color: lightblue;
+    height: 30px;
     width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
