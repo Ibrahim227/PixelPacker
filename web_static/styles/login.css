@@ -3,6 +3,7 @@ body {
     padding: 0px;
     background-position: center;
     background-size: cover;
+    background: url(../images/backimage.png);
 }
 
 .loginbox {
