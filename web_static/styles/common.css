@@ -43,5 +43,12 @@ body{
 
 .new-container .btn1 {
     width: 100px;
+    height: 50px;
+    border-radius: 20%;
 
+}
+.new-container .btn1:hover {
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
 }
