@@ -7,13 +7,13 @@
   display: flex;
   margin-left: auto;
   border-style: dotted;
+
 }
 
 .topnav .logo {
     border-radius: 200%;
     height: 100%;
-
-
+    display: grid;
 }
 /* Style the links inside the navigation bar */
 .topnav a {
