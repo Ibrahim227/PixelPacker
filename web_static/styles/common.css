@@ -1,6 +1,3 @@
-html, body {
-    height: 100%;
-}
 body{
 	margin: 0px;
     padding: 0px;
@@ -15,16 +12,18 @@ body{
 
 .container{
     margin: auto;
-    max-width: 1000px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 5px;
     padding: 0px;
     border-style: dotted;
+}
+.container div {
+    float: left;
+
 }
 .container h1 {
     width: 100%;
     text-align: center;
-    height: 15%;
+    height: 15px;
 }
 
 .container p {
@@ -33,20 +32,25 @@ body{
     height: 100%;
 }
 .new-container {
+    margin: auto;
+    margin-top: 10px;
+    width: 300px;
     height: 300px;
     background-color: #fff;
     border-style: dotted;
     display: inline;
     position: relative;
-    visibility: visible;
+    display: grid;
+    float: left;
 }
 
 .new-container .btn1 {
     width: 100px;
     height: 50px;
     border-radius: 20%;
-
+    margin-top: 100px;
 }
+
 .new-container .btn1:hover {
     cursor: pointer;
     background: #ffc107;
