@@ -6,9 +6,15 @@
   padding-top: 1px;
   display: flex;
   margin-left: auto;
-
+  border-style: dotted;
 }
 
+.topnav .logo {
+    border-radius: 200%;
+    height: 100%;
+
+
+}
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
