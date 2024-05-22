@@ -9,10 +9,8 @@ body{
     font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    background-image: url(../images/backimage.png);
+    #background-image: url(../images/backimage.png);
     background-position: center;
-    background-size: 900px;
-
  }
 
 .container{
