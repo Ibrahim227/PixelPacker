@@ -49,10 +49,18 @@ body{
     height: 50px;
     border-radius: 20%;
     margin-top: 100px;
+
 }
 
 .new-container .btn1:hover {
     cursor: pointer;
     background: #ffc107;
     color: #000;
+}
+
+.new-section .container-section {
+    margin: auto;
+    margin-top: 10px;
+    border-style: dotted;
+
 }
