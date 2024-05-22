@@ -9,6 +9,10 @@ body{
     font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    background-image: url(../images/backimage.png);
+    background-position: center;
+    background-size: 900px;
+
  }
 
 .container{
@@ -16,6 +20,7 @@ body{
     max-width: 1000px;
     margin-top: 30px;
     margin-bottom: 30px;
+    padding: 0px;
 }
 .container h1 {
     width: 100%;
