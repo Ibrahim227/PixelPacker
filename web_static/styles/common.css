@@ -19,6 +19,7 @@ body{
     margin-top: 30px;
     margin-bottom: 30px;
     padding: 0px;
+    border-style: dotted;
 }
 .container h1 {
     width: 100%;
@@ -31,9 +32,16 @@ body{
     width: 100%;
     height: 100%;
 }
-/*
-.logo {
-    height: 150%;
-    width: 920%;
-    align-items: center;
-}*/
+.new-container {
+    height: 300px;
+    background-color: #fff;
+    border-style: dotted;
+    display: inline;
+    position: relative;
+    visibility: visible;
+}
+
+.new-container .btn1 {
+    width: 100px;
+
+}
