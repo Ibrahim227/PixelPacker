@@ -56,7 +56,7 @@ body{
 
 .new-container > .button-convert .btn1:hover {
     cursor: pointer;
-    background: #ffc107;
+    background: #fff;
     color: #000;
 }
 
@@ -69,7 +69,7 @@ body{
 
 .new-container > .button-file .btn2:hover {
     cursor: pointer;
-    background: #ccc000;
+    background: #fff;
     color: #000;
 }
 
