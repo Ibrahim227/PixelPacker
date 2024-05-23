@@ -48,7 +48,7 @@ body{
     width: 100px;
     height: 50px;
     border-radius: 20%;
-    margin-top: 100px;
+    margin-top: 5px;
 
 }
 
@@ -58,9 +58,7 @@ body{
     color: #000;
 }
 
-.new-section .container-section {
-    margin: auto;
-    margin-top: 10px;
-    border-style: dotted;
-
+.new-container.button-file .btn2 {
+    width: 100%;
+    height: 100px;
 }
