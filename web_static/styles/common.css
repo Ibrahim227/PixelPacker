@@ -6,15 +6,17 @@ body{
     font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    #background-image: url(../images/backimage.png);
-    background-position: center;
+    background-image: url(../images/logo02.jpg);
+    background-position: cover;
  }
 
 .container{
     margin: auto;
     margin-top: 5px;
     padding: 0px;
-    border-style: dotted;
+    border-style: none;
+    background-image: url(../images/logo04.jpg);
+    background: transparent;
 }
 .container div {
     float: left;
@@ -34,23 +36,20 @@ body{
 
 .new-container {
     margin: auto;
-    margin-top: 10px;
+    margin-top: 120px;
     width: 300px;
-    height: 300px;
+    height: 200px;
     background-color: #fff;
-    background: url(../images/logo1.ico);
+    background: url(../images/logo04.jpg);
     background: cover;
-    border-style: dashed;
-    position: relative;
+    border-style: none;
     display: grid;
-    float: left;
 }
 
 .new-container > .button-convert .btn1 {
     width: 100%;
     height: 50px;
-    border-radius: 20%;
-    margin-top: 0px;
+    border-radius: 100%;
     position: relative;
     border-radius: 30px;
 
@@ -65,8 +64,8 @@ body{
 .new-container > .button-file .btn2 {
     width: 100%;
     height: 50px;
-    margin-top: 2px;
-    border-radius: 30px;
+    margin-top: 5px;
+    border-radius: 300px;
 }
 
 .new-container > .button-file .btn2:hover {
@@ -79,7 +78,7 @@ body{
     margin: auto;
     margin-top: 0px;
     background-color: #fff;
-    border-style: dotted;
+    border-style: none;
     display: inline-block;
     position: relative;
 }
@@ -89,6 +88,7 @@ body{
     height: 50px;
     width: 70px;
     border-radius: 30px;
+    margin-top: 1px;
 }
 .choice-from-file .choice-from:hover {
     cursor: pointer;
