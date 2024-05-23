@@ -3,10 +3,10 @@
   overflow: hidden;
   background-color: #e9e9e9;
   padding-bottom: 0px;
-  padding-top: 1px;
+  padding-top: 0px;
   display: flex;
   margin-left: auto;
-  border-style: dotted;
+  border-style: none;
 
 }
 
