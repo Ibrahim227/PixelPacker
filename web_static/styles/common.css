@@ -38,8 +38,9 @@ body{
     width: 300px;
     height: 300px;
     background-color: #fff;
-    border-style: dotted;
-    display: inline;
+    background: url(../images/logo1.ico);
+    background: cover;
+    border-style: dashed;
     position: relative;
     display: grid;
     float: left;
@@ -51,6 +52,7 @@ body{
     border-radius: 20%;
     margin-top: 0px;
     position: relative;
+    border-radius: 30px;
 
 }
 
@@ -64,7 +66,7 @@ body{
     width: 100%;
     height: 50px;
     margin-top: 2px;
-    border-radius: 20%;
+    border-radius: 30px;
 }
 
 .new-container > .button-file .btn2:hover {
@@ -73,3 +75,36 @@ body{
     color: #000;
 }
 
+.choice-from-file {
+    margin: auto;
+    margin-top: 0px;
+    background-color: #fff;
+    border-style: dotted;
+    display: inline-block;
+    position: relative;
+}
+
+.choice-from-file .choice-from {
+    border-style: flex;
+    height: 50px;
+    width: 70px;
+    border-radius: 30px;
+}
+.choice-from-file .choice-from:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+}
+
+.choice-from-file .to {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.choice-from-file .choice-convert {
+    border-style: flex;
+    height: 50px;
+    width: 70px;
+    border-radius: 30px;
+}
