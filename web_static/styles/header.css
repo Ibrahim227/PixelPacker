@@ -2,11 +2,12 @@
 .topnav {
   overflow: hidden;
   background-color: #e9e9e9;
+  #background-image: url(../images/logo04.jpg);
   padding-bottom: 0px;
   padding-top: 0px;
   display: flex;
   margin-left: auto;
-  border-style: none;
+  border-style: thin;
 
 }
 
