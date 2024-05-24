@@ -38,11 +38,12 @@ body{
     margin: auto;
     margin-top: 120px;
     width: 300px;
-    height: 200px;
+    height: 180px;
     background-color: #fff;
     background: url(../images/logo04.jpg);
     background: cover;
     border-style: none;
+    border-radius: 30px;
     display: grid;
 }
 
@@ -97,9 +98,9 @@ body{
 }
 
 .choice-from-file .to {
-    font-size: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    font-size: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .choice-from-file .choice-convert {
