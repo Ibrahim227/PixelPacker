@@ -1,0 +1,2 @@
+class CompressedImages:
+    pass
