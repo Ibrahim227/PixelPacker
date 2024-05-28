@@ -42,4 +42,55 @@ class DBStorage:
         """query on current db"""
         new_dict = {}
         for k in classes:
-            pass
+            if k is None or cls is classes[k] or cls is k:
+                objs = self.__session.query(classes[k]).all()
+                for obj in objs:
+                    key = obj.__class__.__name__ + '.' + obj.id
+                    new_dict[key] = obj
+        return new_dict
+
+    def new(self, obj):
+        """add it to the db session"""
+        self.__session.add(obj)
+
+    def save(self):
+        """commit all changes to the db session"""
+        self.__session.commit()
+
+    def delete(self, obj=None):
+        """"delete obj to the db session if not None"""
+        if obj is not None:
+            self.__session.delete(obj)
+
+    def reload(self):
+        """"reload data from the db"""
+        Base.metadata.create_all(self.__engine)
+        sess_factory = sessionmaker(bin=self.__engine, expire_on_commit=False)
+        Session = scoped_session(sess_factory)
+        self.__session = Session
+
+    def close(self):
+        """call remove() method on the private session attr"""
+        self.__session.remove()
+
+    def get(self, cls, id):
+        """returns the object"""
+        all_cls = models.storage.all(cls)
+        for value in all_cls.values():
+            if value.id == id:
+                return value
+
+        return None
+
+    def count(self, cls=None):
+        """Count the number of objects in storage"""
+        all_classes = classes.values()
+
+        if not cls:
+            count = 0
+            for cla in all_classes:
+                count += len(models.storage.all(cla).values())
+        else:
+            count = len(models.storage.all(cls).values())
+
+        return count
