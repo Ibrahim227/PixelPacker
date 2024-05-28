@@ -86,7 +86,7 @@ body {
 
 .header,
 .footer {
-    background: #15181f url(../images/back0.jpg) repeat;
+    background: #15181a url(../images/back0.jpg) repeat;
     color: var(--light-text-color);
 }
 
@@ -118,6 +118,7 @@ body {
 .slogan {
     font: italic 25px "Times New Roman", Times, Georgia, serif;
     color: var(--gray-200);
+    margin-top: 15px;
 }
 
 .nav {
@@ -138,8 +139,19 @@ body {
 }
 
 .nav a {
+    position: relative;
     display: block;
     line-height: 3.875;
     padding: 0 24px 0 53px;
     color: var(--nav-link-color);
+}
+.nav a:hover {
+    background-color: #13151a;
+}
+
+.nav a i {
+    position: absolute;
+    top: 21px;
+    left: 24px;
+    font-size: 20px;
 }
