@@ -1,0 +1,2 @@
+class CompressionParameters:
+    pass
