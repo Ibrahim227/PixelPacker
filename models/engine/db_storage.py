@@ -20,6 +20,6 @@ class DBStorage:
         PIXELPACKER_ENV = getenv('PIXELPACKER_ENV')
         self.__engine = create_engine('mysql+mysqldb://{}:{}@{}/{}'.format(PIXELPACKER_MYSQL_USER, PIXELPACKER_MYSQL_PWD,
                                                                            PIXELPACKER_MYSQL_HOST, PIXELPACKER_MYSQL_DB))
-        if PIXELPACKER_ENV != 'dev':
+        if PIXELPACKER_ENV == 'test':
             Base.metadata.drop_all(self.__engine)
 
