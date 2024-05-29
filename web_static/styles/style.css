@@ -205,7 +205,10 @@ body {
 
 .footer {
     padding: 36px 0;
-
+}
+.footer .container {
+    display: flex;
+    justify-content: space-between;
 }
 .footer-nav {
     display: flex;
@@ -257,9 +260,10 @@ body {
     line-height: 1.6667;
     font-size: 12px;
     color: var(--gray-200);
+    margin-top: 50px;
 }
 .copyright a {
     color: var(--gray-200);
-    margin-left: 8px;
+
 
 }
