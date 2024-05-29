@@ -16,5 +16,7 @@ class CompressedImages(BaseModel, Base):
     compressed_ratio = Column(Float, nullable=False)
     compressed_filename = Column(String(255), nullable=False)
     compressed_data = Column(BLOB, nullable=False)
-    
 
+    def __init__(self, *args, **kwargs):
+        """Initialize CompressedImages"""
+        super().__init__(*args, **kwargs)
