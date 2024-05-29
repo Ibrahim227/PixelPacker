@@ -19,3 +19,7 @@ class Images(BaseModel, Base):
 
     if models.storage_t != "db":
         pass
+
+    def __init__(self, *args, **kwargs):
+        """Initialize Images"""
+        super().__init__(*args, **kwargs)
