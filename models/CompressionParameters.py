@@ -15,3 +15,6 @@ class CompressionParameters(BaseModel, Base):
     quantization_matrix = Column(Text, nullable=False)
     transform_method = Column(String(255), nullable=False)
 
+    def __init__(self, *args, **kwargs):
+        """Initialize CompressionParameters"""
+        super().__init__(*args, **kwargs)
