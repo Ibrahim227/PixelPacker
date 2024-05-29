@@ -86,7 +86,7 @@ body {
 
 .header,
 .footer {
-    background: #15181a url(../images/back0.jpg) repeat;
+    background: #15181a url(../images/new-bg.png) repeat;
     color: var(--light-text-color);
 }
 
@@ -124,6 +124,8 @@ body {
     line-height: 1.6364;
     max-width: 715px;
     margin: 0 auto 50px;
+    margin-top: -20px;
+    margin-bottom: 100px;
 }
 
 .hero p strong {
@@ -203,12 +205,13 @@ body {
 
 .footer {
     padding: 36px 0;
+
 }
 .footer-nav {
     display: flex;
 }
 .footer-nav .column {
-    width: 136px;
+    width: 200px;
 }
 .footer-nav .title {
     font-size: 12px;
@@ -226,4 +229,37 @@ body {
 
 .footer-nav a {
     color: var(--gray-200);
+}
+
+.soc {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.soc li {
+    margin-left: 20px;
+}
+
+.soc a {
+    color: var(--soc-link-color);
+    font-size: 20px;
+}
+.soc a:hover {
+    text-decoration: none;
+    color: var(--gray-200);
+}
+
+.copyright {
+    text-align: right;
+    line-height: 1.6667;
+    font-size: 12px;
+    color: var(--gray-200);
+}
+.copyright a {
+    color: var(--gray-200);
+    margin-left: 8px;
+
 }
