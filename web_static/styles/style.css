@@ -86,7 +86,7 @@ body {
 
 .header,
 .footer {
-    background: #15181a url(../images/new-bg.png) repeat;
+    background: #484848 url(../images/new-bg.png) repeat;
     color: var(--light-text-color);
 }
 
