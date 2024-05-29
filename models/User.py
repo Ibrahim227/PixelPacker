@@ -13,11 +13,11 @@ class User(BaseModel, Base):
     if models.storage_t == 'db':
         __tablename__ = 'users'
         id = Column(Integer, primary_key=True, auto_increment=True)
-        first_name = Column(String(255), nullable=True)
-        last_name = Column(String(255), nullable=True)
-        email = Column(String(255), nullable=False)
-        password = Column(String(255), nullable=False)
-        phone = Column(Integer, nullable=False)
+        first_name = Column(String(255), unique=True)
+        last_name = Column(String(255), unique=True)
+        email = Column(String(255), unique=False)
+        password = Column(String(255), unique=False)
+        phone = Column(Integer, unique=False)
         address = relationship("Address", backref="user")
     else:
         password = ""
