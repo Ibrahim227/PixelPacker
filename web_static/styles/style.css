@@ -244,6 +244,7 @@ body {
 
 .soc li {
     margin-left: 20px;
+    list-style: none;
 }
 
 .soc a {
@@ -264,6 +265,4 @@ body {
 }
 .copyright a {
     color: var(--gray-200);
-
-
 }
