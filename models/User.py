@@ -3,7 +3,7 @@
 from hashlib import md5
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String, Integer
-from sqlalchemy import relationship
+from sqlalchemy.orm import relationship
 
 import models
 
@@ -24,6 +24,7 @@ class User(BaseModel, Base):
         email = ""
         last_name = ""
         first_name = ""
+        phone = ""
 
     def __init__(self, *args, **kwargs):
         """Initialize the user"""
