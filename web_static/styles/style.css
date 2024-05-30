@@ -93,7 +93,30 @@ body {
 }
 
 .main {
+    display: flex;
     background: var(--body-bg);
+    justify-content: space-between;
+}
+.main .container {
+    border-cover: transparent;
+}
+.main .container h3 {
+    position: relative;
+    background-color: lightgray;
+    height: 2 10 10%;
+    text-align: center;
+}
+.main .container .title1 {
+    background-color: lightblue;
+}
+.main .container .title2 {
+    background-color: lightgray;
+}
+.main .container .title3 {
+    background-color: lightgreen;
+}
+.main .container p{
+
 }
 
 .hero {
