@@ -4,5 +4,7 @@
 
 class ChooseFile:
     """The ChooseFile class: the file to be compressed"""
-    pass
 
+    def __init__(self):
+        """Initialize the class"""
+        pass
