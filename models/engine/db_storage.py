@@ -5,11 +5,11 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
 import models
-from models.Address import Address
-from models.CompressedImages import CompressedImages
-from models.CompressionParameters import CompressionParameters
-from models.Images import Images
-from models.User import User
+from models.address import Address
+from models.compressedimages import CompressedImages
+from models.compressionparameters import CompressionParameters
+from models.images import Images
+from models.user import User
 from models.base_model import Base
 
 classes = {
