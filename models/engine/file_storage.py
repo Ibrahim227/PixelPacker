@@ -1,14 +1,13 @@
 #!/usr/bin/python3
 """Import required libraries/modules"""
 import json
+
 import models
-from models.Address import Address
-from models.CompressedImages import CompressedImages
-from models.CompressionParameters import CompressionParameters
-from models.Images import Images
-from models.User import User
-from models.base_model import Base
-from hashlib import md5
+from models.address import Address
+from models.compressedimages import CompressedImages
+from models.compressionparameters import CompressionParameters
+from models.images import Images
+from models.user import User
 
 classes = {
     "User": User,
