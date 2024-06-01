@@ -6,6 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="f2b8b027-c152-41e5-a474-2f4aa85a8353" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../Ibrahim227/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ibrahim227/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_flask/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_flask/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_l/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_static/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_l/static/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_static/images/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_l/static/images/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_static/styles/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_l/static/styles/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_l/static/styles/fonts/icomoon.eot" beforeDir="false" afterPath="$PROJECT_DIR$/web_static/styles/fonts/icomoon.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_l/static/styles/fonts/icomoon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web_static/styles/fonts/icomoon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_l/static/styles/fonts/icomoon.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/web_static/styles/fonts/icomoon.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_l/static/styles/fonts/icomoon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/web_static/styles/fonts/icomoon.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_l/static/styles/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/web_static/styles/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_l/static/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web_static/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_l/templates/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_l/templates/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_static/history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_l/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_l/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_static/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +65,12 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Maman Sani Ibrahim/Documents/GitHub/Ibrahim227&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Maman Sani Ibrahim\Documents\GitHub\PixelPacker\web_static" />
+      <recent name="C:\Users\Maman Sani Ibrahim\Documents\GitHub\PixelPacker\web_flask\static" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
