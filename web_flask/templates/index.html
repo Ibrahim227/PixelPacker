@@ -39,12 +39,22 @@
             </nav>
         </div>
     </header>
+    <div class="menu-wrapper">
+        <label for="pc-upload-add" class="file-source">
+            <span>choosefile </span><i data-toggle-widget=".file-source-nav"></i>
+        </label>
+        <input type="file" id="pc-upload-add" name="pc-upload" class="file-input" multiple>
+        <i>
+            <svg width="26" height="24"><use xlink:href="#from-pc"></use></svg>
+
+        </i>
+    </div>
     <section class="hero">
         <img class="bg-image" src="../static/images/logo02.jpg" alt="logo">
         <div class="container">
             <h1>PixelPacker</h1>
             <p><strong>Intelligent Image Compression Algorithm</strong></p>
-            <button type="button" class="btn btn--blue"> Choose file</button>
+            <input type="file" name="pc-upload" class="btn btn--blue" multiple>
             <!--            <span class="to">to</span>-->
             <span>
                 <select class="choice-from">
@@ -53,7 +63,7 @@
                     <option value="3">GIF</option>
 <!--                        <option value="4">HEIF</option>-->
 <!--                        <option value="5">DNG</option>-->
-                    <option value="6">JPG</option>
+<!--                    <option value="6">JPG</option>-->
 <!--                        <option value="7">MAP</option>-->
 <!--                        <option value="8">JP2</option>-->
 <!--                    <option value="9">HEIC</option>-->
