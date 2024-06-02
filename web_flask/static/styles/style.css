@@ -85,6 +85,10 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
+.container .file-source-caption {
+    text-align: center;
+    margin-right: 350px;
+}
 
 .header,
 .footer {
