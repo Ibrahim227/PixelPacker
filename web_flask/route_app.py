@@ -10,9 +10,19 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/', strict_slashes=False)
+@app.route('/history', strict_slashes=False)
 def history():
     return render_template('history.html')
+
+
+@app.route('/login', strict_slashes=False)
+def login():
+    return render_template('login.html')
+
+
+@app.route('/home', strict_slashes=False)
+def home():
+    return render_template('index.html')
 
 
 @app.route('/run-script', methods=['GET'])
@@ -23,4 +33,4 @@ def run_script():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True)
