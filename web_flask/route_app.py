@@ -10,17 +10,17 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/history', strict_slashes=False)
+@app.route('/history/', strict_slashes=False)
 def history():
     return render_template('history.html')
 
 
-@app.route('/login', strict_slashes=False)
+@app.route('/login/', strict_slashes=False)
 def login():
     return render_template('login.html')
 
 
-@app.route('/home', strict_slashes=False)
+@app.route('/home/', strict_slashes=False)
 def home():
     return render_template('index.html')
 
