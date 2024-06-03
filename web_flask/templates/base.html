@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
 </head>
 <body>
+    {% block body %}
     <header>
         <nav>
             <ul>
@@ -21,5 +22,6 @@
     <footer>
         <p>&copy; 2024 PixelPacker</p>
     </footer>
+    {% block content %}{% endblock %}
 </body>
 </html>
