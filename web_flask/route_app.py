@@ -12,17 +12,17 @@ def index():
 
 @app.route('/history/', strict_slashes=False)
 def history():
-    return render_template('history.html')
+    return render_template('history')
 
 
 @app.route('/login/', strict_slashes=False)
 def login():
-    return render_template('login.html')
+    return render_template('login')
 
 
 @app.route('/home/', strict_slashes=False)
 def home():
-    return render_template('index.html')
+    return render_template('index')
 
 
 if __name__ == '__main__':
