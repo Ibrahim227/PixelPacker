@@ -2,7 +2,8 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %} PixelPacker {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPacker</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -45,13 +46,13 @@
             <h1>PixelPacker</h1>
             <p><strong>Intelligent Image Compression Algorithm</strong></p>
             <form id="upload-form" enctype="multipart/form-data">
-                <input type="file" id="file-input" name="file" accept="image/*" class="btn btn--blue" multiple>
+                <input type="file" id="file-input" name="file" accept="image/*" class="btn btn--blue">
                 <select id="format-select" name="format" class="choice-from">
                     <option value="JPEG">JPEG</option>
                     <option value="PNG">PNG</option>
                     <option value="BMP">BMP</option>
                     <option value="GIF">GIF</option>
-                     <option value="MAP">MAP</option>
+                    <option value="MAP">MAP</option>
                     <option value="JP2">JP2</option>
                     <option value="DNG">DNG</option>
                     <option value="HEIC">HEIC</option>
@@ -66,10 +67,35 @@
                 </select>
                 <button type="button" class="btn btn--green" onclick="uploadAndConvert()">Convert</button>
             </form>
-            <div><a id="download-link" style="display: none;">Download </a></div>
+            <script>
+                function uploadAndConvert() {
+                    const form = document.getElementById('upload-form');
+                    const formData = new FormData(form);
+                    const downloadLink = document.getElementById('download-link');
+
+                    fetch('/convert', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.blob())
+                    .then(blob => {
+                        const url = URL.createObjectURL(blob);
+                        downloadLink.href = url;
+                        downloadLink.download = 'converted_image.'
+                        + document.getElementById('format-select').value.toLowerCase();
+                        downloadLink.style.display = 'block';
+                        downloadLink.innerText = 'Download ' + downloadLink.download;
+                    })
+                    .catch(error => console.error('Error:', error));
+                }
+            </script>
             <div class="file-source">
                 <span>Drop file(s) here. Maximum file size 50MB</span>
             </div>
+            <div>
+                <button type="button" disabled class="download"><a id="download-link" style="display: none;">Download </a></button>
+            </div>
+
             <div class="description">
 
             </div>
