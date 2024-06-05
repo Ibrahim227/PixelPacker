@@ -44,32 +44,29 @@
         <div class="container">
             <h1>PixelPacker</h1>
             <p><strong>Intelligent Image Compression Algorithm</strong></p>
-            <input type="file" name="pc-upload" class="btn btn--blue" multiple>
-            <form action="/upload" method="POST" enctype="multipart/form-data">
-<!--        <input type="file" name="pc-upload" class="btn btn&#45;&#45;blue" multiple>-->
-        <button type="submit">Upload</button>
-    </form>
-            <span>
-                <select class="choice-from">
-                    <option value="1">JPEG</option>
-                    <option value="2">PNG</option>
-                    <option value="3">GIF</option>
-<!--                        <option value="4">HEIF</option>-->
-<!--                        <option value="5">DNG</option>-->
-<!--                    <option value="6">JPG</option>-->
-<!--                        <option value="7">MAP</option>-->
-<!--                        <option value="8">JP2</option>-->
-<!--                    <option value="9">HEIC</option>-->
-<!--                        <option value="10">PALM</option>-->
-<!--                        <option value="11">RGBA</option>-->
-<!--                        <option value="12">RGBO</option>-->
-                    <option value="13">SVG</option>
-                    <option value="14">WEBP</option>
-<!--                        <option value="15">WBMP</option>-->
-<!--                        <option value="16">WPG</option>-->
+            <form id="upload-form" enctype="multipart/form-data">
+                <input type="file" id="file-input" name="file" accept="image/*" class="btn btn--blue" multiple>
+                <select id="format-select" name="format" class="choice-from">
+                    <option value="JPEG">JPEG</option>
+                    <option value="PNG">PNG</option>
+                    <option value="BMP">BMP</option>
+                    <option value="GIF">GIF</option>
+                     <option value="MAP">MAP</option>
+                    <option value="JP2">JP2</option>
+                    <option value="DNG">DNG</option>
+                    <option value="HEIC">HEIC</option>
+                    <option value="PALM">PALM</option>
+                    <option value="RGBA">RGBA</option>
+                    <option value="RGBO">RGBO</option>
+                    <option value="SVG">SVG</option>
+                    <option value="WEBP">WEBP</option>
+                    <option value="WBMP">WBMP</option>
+                    <option value="WPG">WPG</option>
+                    <option value="HEIF">HEIF</option>
                 </select>
-            </span>
-            <button type="button" class="btn btn--green">Convert</button>
+                <button type="button" class="btn btn--green" onclick="uploadAndConvert()">Convert</button>
+            </form>
+            <div><a id="download-link" style="display: none;">Download </a></div>
             <div class="file-source">
                 <span>Drop file(s) here. Maximum file size 50MB</span>
             </div>
