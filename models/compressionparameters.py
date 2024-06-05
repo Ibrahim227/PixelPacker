@@ -2,6 +2,7 @@
 from sqlalchemy import Column, String, Integer, Text
 
 from models.base_model import BaseModel, Base
+from models.images import Images
 
 
 class CompressionParameters(BaseModel, Base):
