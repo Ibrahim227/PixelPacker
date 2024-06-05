@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
 
 from sqlalchemy import Column, String, DateTime
 from sqlalchemy.orm import declarative_base
@@ -12,6 +12,7 @@ Base = declarative_base()
 
 class BaseModel:
     """Main class for all models"""
+    now = datetime.now(tz=timezone.utc)
     id = Column(String(60), primary_key=True)
     created_at = Column(DateTime, default=datetime.now())
     updated_at = Column(DateTime, default=datetime.now())
