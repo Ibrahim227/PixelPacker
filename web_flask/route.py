@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Import required libraries/modules"""
 import io
-import zipfile
 
 from PIL import Image
 from flask import Flask, request, send_file, make_response
@@ -12,7 +11,7 @@ app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def index():
-    return render_template('index5.html')
+    return render_template('index.html')
 
 
 @app.route('/convert', methods=['POST'])
@@ -20,40 +19,25 @@ def convert_image():
     if 'file' not in request.files or 'format' not in request.form:
         return 'No file or format provided', 400
 
-    files = request.files['file']
+    file = request.files['file']
     formatt = request.form['format'].upper()
 
-    output_files = []
+    if file.filename == '':
+        return 'No selected file', 400
 
     try:
-        for file in files:
-            if file.filename == '':
-                continue
+        img = Image.open(file)
+        img_io = io.BytesIO()
+        img.save(img_io, formatt)
+        img_io.seek(0)
 
-            img = Image.open(files)
-            img_io = io.BytesIO()
-            img.save(img_io, formatt)
-            img_io.seek(0)
+        original_filename = file.filename
+        base_filename = original_filename.rsplit('.', 1)[0]
+        new_filename = f"{base_filename}.{formatt.lower()}"
 
-            original_filename = files.filename
-            base_filename = original_filename.rsplit('.', 1)[0]
-            new_filename = f"{base_filename}.{formatt.lower()}"
-
-            output_files.append((new_filename, img_io))
-            # Create a ZIP file if there are multiple files
-        if len(output_files) > 1:
-            zip_io = io.BytesIO()
-            with zipfile.ZipFile(zip_io, 'w') as zip_file:
-                for filename, img_io in output_files:
-                    zip_file.writestr(filename, img_io.getvalue())
-            zip_io.seek(0)
-            return send_file(zip_io, mimetype='application/zip', as_attachment=True,
-                             download_name='converted_images.zip')
-        elif len(output_files) == 1:
-            new_filename, img_io = output_files[0]
-            response = make_response(send_file(img_io, mimetype=f'image/{formatt.lower()}'))
-            response.headers['Content-Disposition'] = f'attachment; filename={new_filename}'
-            return response
+        response = make_response(send_file(img_io, mimetype=f'image/{formatt.lower()}'))
+        response.headers['Content-Disposition'] = f'attachment; filename={new_filename}'
+        return response
     except Exception as e:
         return str(e), 500
 
@@ -74,4 +58,4 @@ def home():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='localhost', port=5000)
+    app.run(debug=True, host='localhost', port=8000)
