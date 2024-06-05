@@ -46,10 +46,11 @@
             <h1>PixelPacker</h1>
             <p><strong>Intelligent Image Compression Algorithm</strong></p>
             <form id="upload-form" enctype="multipart/form-data">
-                <input type="file" id="file-input" name="file" accept="image/*" class="btn btn--blue">
+                <input type="file" id="file-input" name="file" accept="image/*" class="btn btn--blue" multiple>
                 <select id="format-select" name="format" class="choice-from">
                     <option value="JPEG">JPEG</option>
                     <option value="PNG">PNG</option>
+                    <option value="ICO">ICO</option>
                     <option value="BMP">BMP</option>
                     <option value="GIF">GIF</option>
                     <option value="MAP">MAP</option>
@@ -97,7 +98,7 @@
                 <span>Drop file(s) here. Maximum file size 50MB</span>
             </div>
             <div>
-                <button type="button" disabled class="download"><a id="download-link" style="display: none;">Download </a></button>
+                <button type="button" disabled class="download" style="display: initial;"><a id="download-link" style="display: none;">Download </a></button>
             </div>
 
             <div class="description">
