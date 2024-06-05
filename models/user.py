@@ -5,30 +5,27 @@ from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String, Integer
 from sqlalchemy.orm import relationship
 
-import models
-
 
 class User(BaseModel, Base):
     """Represents a user"""
-    if models.storage_t == 'db':
-        __tablename__ = 'user'
-        id = Column(Integer, primary_key=True, auto_increment=True)
-        first_name = Column(String(255), unique=True)
-        last_name = Column(String(255), unique=True)
-        email = Column(String(255), unique=False)
-        password = Column(String(255), unique=False)
-        phone = Column(Integer, unique=False)
-        address = relationship("Address", backref="user")
-    else:
-        password = ""
-        email = ""
-        last_name = ""
-        first_name = ""
-        phone = ""
+    __tablename__ = 'user'
+    id = Column(Integer, primary_key=True)
+    first_name = Column(String(255), unique=True)
+    last_name = Column(String(255), unique=True)
+    email = Column(String(255), unique=True)
+    password = Column(String(255), unique=True)
+    phone = Column(Integer, unique=True)
+    address = relationship("Address", backref="user")
 
     def __init__(self, *args, **kwargs):
         """Initialize the user"""
         super().__init__(*args, **kwargs)
+
+    def __repr__(self):
+        """Returns the representation of the user"""
+        return "User(first_name='%s', last_name='%s', email='%s', password='%s', phone='%s', address='%s')>".format(
+            self.first_name, self.last_name, self.email, self.password, self.phone, self.password, self.phone,
+            self.address)
 
     def __setattr__(self, name, value):
         """set a password with md5 encryption"""
