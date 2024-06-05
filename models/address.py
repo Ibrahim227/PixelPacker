@@ -9,7 +9,7 @@ from sqlalchemy.orm import relationship
 class Address(BaseModel, Base):
     """Represents an address of a user"""
     __tablename__ = 'address'
-    street_id = Column(Integer, primary_key=True, autoincrement=True)
+    street_id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey('user.id'))
     street = Column(Integer, nullable=False)
     city = Column(String(255), nullable=False)
