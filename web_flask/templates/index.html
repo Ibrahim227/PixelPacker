@@ -32,7 +32,7 @@
             <nav>
                 <ul class="nav">
                     <li><a href="index.html"><i class="icon-home"></i> Home</a></li>
-                    <li><a href="#"><i class="icon-history"></i> History</a></li>
+                    <li><a href="history.html"><i class="icon-history"></i> History</a></li>
                     <li><a href="#"><i class="icon-user"></i> Blog</a></li>
                     <li><a href="login.html"><i class="icon-lock"></i> Login</a></li>
                 </ul>
@@ -45,6 +45,10 @@
             <h1>PixelPacker</h1>
             <p><strong>Intelligent Image Compression Algorithm</strong></p>
             <input type="file" name="pc-upload" class="btn btn--blue" multiple>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+<!--        <input type="file" name="pc-upload" class="btn btn&#45;&#45;blue" multiple>-->
+        <button type="submit">Upload</button>
+    </form>
             <span>
                 <select class="choice-from">
                     <option value="1">JPEG</option>
