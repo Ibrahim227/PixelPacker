@@ -70,8 +70,13 @@
             <script>
                 function uploadAndConvert() {
                     const form = document.getElementById('upload-form');
+                    const fileInput = document.getElementById('file-input');
                     const formData = new FormData(form);
                     const downloadLink = document.getElementById('download-link');
+                    const format = document.getElementById('format-select').value.toLowerCase();
+
+                    const originalFilename = fileInput.files[0].name;
+                    const baseFilename = originalFilename.split('.').slice(0, -1).join('.');
 
                     fetch('/convert', {
                         method: 'POST',
@@ -81,10 +86,9 @@
                     .then(blob => {
                         const url = URL.createObjectURL(blob);
                         downloadLink.href = url;
-                        downloadLink.download = 'converted_image.'
-                        + document.getElementById('format-select').value.toLowerCase();
+                        downloadLink.download = `${baseFilename}.${format}`;
                         downloadLink.style.display = 'block';
-                        downloadLink.innerText = 'Download ' + downloadLink.download;
+                        downloadLink.innerText = `Download ${baseFilename}.${format}`;
                     })
                     .catch(error => console.error('Error:', error));
                 }
