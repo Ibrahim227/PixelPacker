@@ -42,20 +42,25 @@ def convert_image():
         return str(e), 500
 
 
-@app.route('/history/', strict_slashes=False)
+@app.route('/history/', strict_slashes=False, methods=['GET', 'POST'])
 def history():
-    return render_template('history')
+    return render_template('history.html')
 
 
-@app.route('/login/', strict_slashes=False)
+@app.route('/login/', strict_slashes=False, methods=['GET', 'POST'])
 def login():
-    return render_template('login')
+    return render_template('login.html')
 
 
-@app.route('/home/', strict_slashes=False)
+@app.route('/home/', strict_slashes=False, methods=['GET', 'POST'])
 def home():
-    return render_template('index')
+    return render_template('index.html')
+
+
+@app.route('/register/', strict_slashes=False, methods=['GET', 'POST'])
+def register():
+    return render_template('register.html')
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='localhost', port=8000)
+    app.run(debug=True, host='localhost', port=5000)
