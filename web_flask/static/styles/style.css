@@ -171,6 +171,18 @@ body {
 .hero .choice-from:hover {
     background-color: #fff;
 }
+.hero div .download {
+    background-color: #fff;
+    height: 20px;
+    width: auto;
+    margin-top: 40px;
+    text-color: #fff;
+    border-radius: 10%;
+}
+.hero div .download:hover {
+    background-color: lightgreen;
+
+}
 .btn {
     display: inline-block;
     border-radius: 15px;
