@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Converter</title>
+</head>
+<body>
+    <h1>Image Converter</h1>
+    <form id="upload-form" enctype="multipart/form-data">
+        <input type="file" id="file-input" name="files" accept="image/*" multiple>
+        <select id="format-select" name="format">
+            <option value="JPEG">JPEG</option>
+            <option value="PNG">PNG</option>
+            <option value="BMP">BMP</option>
+            <option value="GIF">GIF</option>
+        </select>
+        <button type="button" onclick="uploadAndConvert()">Convert</button>
+    </form>
+    <div id="download-links"><button type="button" disabled class="download" style="display: initial;"><a id="download-link" style="display: none;">Download </a></button>
+</div>
+
+    <script>
+        function uploadAndConvert() {
+            const form = document.getElementById('upload-form');
+            const fileInput = document.getElementById('file-input');
+            const format = document.getElementById('format-select').value.toLowerCase();
+            const downloadLinks = document.getElementById('download-links');
+            downloadLinks.innerHTML = ''; // Clear previous download links
+
+            const files = fileInput.files;
+            for (const file of files) {
+                if (file.size > 50 * 1024 * 1024) { // Check if file size exceeds 50 MB
+                    alert(`${file.name} exceeds the size limit of 50 MB`);
+                    continue;
+                }
+
+                const formData = new FormData();
+                formData.append('file', file);
+                formData.append('format', format);
+
+                fetch('/convert', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    const contentDisposition = response.headers.get('Content-Disposition');
+                    const filename = contentDisposition.split('filename=')[1];
+                    return response.blob().then(blob => ({ blob, filename }));
+                })
+                .then(({ blob, filename }) => {
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = filename;
+                    link.innerText = `Download ${filename}`;
+                    link.style.display = 'block';
+                    downloadLinks.appendChild(link);
+                })
+                .catch(error => console.error('Error:', error));
+            }
+        }
+    </script>
+</body>
+</html>
