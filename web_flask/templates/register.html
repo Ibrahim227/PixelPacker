@@ -2,9 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/styles/register.css"/>
+    <link rel="icon" type="image/x-icon" href="../static/images/logo2.png">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <title>Register</title> <style>
+      :root {
+          --body-bg: #fff;
+          --base-text-color: #55606e;
+          --btn-color: #fff;
+          --green: #83c129;
+          --dark-green: #518719;
+          --blue: #068fd5;
+          --dark-blue: #046b9f;
+          --light-text-color: #fff;
+          --nav-link-color: #fff;
+          --soc-link-color: #fff;
+          --gray-100: #d9dbdf;
+          --gray-200: #8e959c;
+      }
+    </style>
 </head>
 <body>
-
+    <div class="avatar-container">
+        <img src="../static/images/logo2.png" class="avatar">
+    </div>
+    <div class="registerbox">
+        <h1>SIGN UP</h1>
+        <form>
+            <label>First Name</label>
+            <input type="text" class="first-name" placeholder="Enter your first name" required maxlength="60">
+            <label>Last Name</label>
+            <input type="text" class="last-name" placeholder="Enter your last name" maxlength="60">
+            <label>E-mail Address</label>
+            <input type="text" name="" placeholder="jhon@gmail.com" value="" required autofocus>
+            <label>Password</label>
+            <input type="password" name="" placeholder="Enter Password" value="" required>
+            <label>Country</label>
+            <input type="text" name="" placeholder="">
+            <label>Address</label>
+            <input type="text" name="" placeholder="Enter your address" value="">
+            <div class="inside-form">
+                <label for="telNo">Phone</label>
+                <input id="telNo" name="telNo" type="tel" placeholder="Enter your number" value="" size="20" required>
+                <span class="validity"></span>
+            </div>
+            <div>
+                <input type="submit" name="" value="Submit">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
