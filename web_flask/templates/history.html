@@ -31,10 +31,10 @@
             <div class="slogan">PixelPacker</div>
             <nav>
                 <ul class="nav">
-                    <li><a href="index.html"><i class="icon-home"></i> Home</a></li>
-                    <li><a href="history.html"><i class="icon-history"></i> History</a></li>
+                    <li><a href="{{ url_for('index') }}"><i class="icon-home"></i> Home</a></li>
+                    <li><a href="{{ url_for('history') }}"><i class="icon-history"></i> History</a></li>
                     <li><a href="#"><i class="icon-user"></i> Blog</a></li>
-                    <li><a href="login.html"><i class="icon-lock"></i> Login</a></li>
+                    <li><a href="{{ url_for('login') }}"><i class="icon-lock"></i> Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -44,29 +44,6 @@
         <div class="container">
             <h1>PixelPacker</h1>
             <p><strong>Intelligent Image Compression Algorithm</strong></p>
-<!--            <button type="button" class="btn btn&#45;&#45;blue">Choose file</button>-->
-<!--            &lt;!&ndash;            <span class="to">to</span>&ndash;&gt;-->
-<!--            <span>-->
-<!--                <select class="choice-from">-->
-<!--                    <option value="1">JPEG</option>-->
-<!--                    <option value="2">PNG</option>-->
-<!--                    <option value="3">GIF</option>-->
-<!--&lt;!&ndash;                        <option value="4">HEIF</option>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <option value="5">DNG</option>&ndash;&gt;-->
-<!--                    <option value="6">JPG</option>-->
-<!--&lt;!&ndash;                        <option value="7">MAP</option>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <option value="8">JP2</option>&ndash;&gt;-->
-<!--                    <option value="9">HEIC</option>-->
-<!--&lt;!&ndash;                        <option value="10">PALM</option>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <option value="11">RGBA</option>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <option value="12">RGBO</option>&ndash;&gt;-->
-<!--                    <option value="13">SVG</option>-->
-<!--                    <option value="14">WEBP</option>-->
-<!--&lt;!&ndash;                        <option value="15">WBMP</option>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <option value="16">WPG</option>&ndash;&gt;-->
-<!--                </select>-->
-<!--            </span>-->
-<!--            <button type="button" class="btn btn&#45;&#45;green">Compress</button>-->
         </div>
     </section>
     <main class="main">
