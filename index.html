@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPacker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../static/images/logo2.png" style="border-radius:50%">
+    <link rel="stylesheet" href="../static/styles/style.css"> <style>
+      :root {
+          --body-bg: #fff;
+          --base-text-color: #55606e;
+          --btn-color: #fff;
+          --green: #83c129;
+          --dark-green: #518719;
+          --blue: #068fd5;
+          --dark-blue: #046b9f;
+          --light-text-color: #fff;
+          --nav-link-color: #fff;
+          --soc-link-color: #fff;
+          --gray-100: #d9dbdf;
+          --gray-200: #8e959c;
+      }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><img src="../static/images/logo2.png" height="55" width="65" alt=""></div>
+            <div class="slogan">PixelPacker</div>
+            <nav>
+                <ul class="nav">
+                    <li><a href="{{ url_for('index') }}"><i class="icon-home"></i> Home</a></li>
+                    <li><a href="{{ url_for('history') }}"><i class="icon-history"></i> History</a></li>
+                    <li><a href="#"><i class="icon-user"></i> Blog</a></li>
+                    <li><a href="{{ url_for('login') }}"><i class="icon-lock"></i> Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <img class="bg-image" src="../static/images/logo02.jpg" alt="Logo">
+        <div class="container">
+            <h1>PixelPacker</h1>
+            <p><strong>Intelligent Image Compression Algorithm</strong></p>
+            <form id="upload-form" enctype="multipart/form-data">
+                <input type="file" id="file-input" name="file" accept="image/*" class="btn btn--blue" multiple>
+                <select id="format-select" name="format" class="choice-from">
+                    <option value="JPEG">JPEG</option>
+                    <option value="PNG">PNG</option>
+                    <option value="ICO">ICO</option>
+                    <option value="BMP">BMP</option>
+                    <option value="GIF">GIF</option>
+                    <option value="MAP">MAP</option>
+                    <option value="JP2">JP2</option>
+                    <option value="DNG">DNG</option>
+                    <option value="HEIC">HEIC</option>
+                    <option value="PALM">PALM</option>
+                    <option value="RGBA">RGBA</option>
+                    <option value="RGBO">RGBO</option>
+                    <option value="SVG">SVG</option>
+                    <option value="WEBP">WEBP</option>
+                    <option value="WBMP">WBMP</option>
+                    <option value="WPG">WPG</option>
+                    <option value="HEIF">HEIF</option>
+                </select>
+                <button type="button" class="btn btn--green" onclick="uploadAndConvert()">Convert</button>
+            </form>
+            <script>
+                function uploadAndConvert() {
+                    const form = document.getElementById('upload-form');
+                    const fileInput = document.getElementById('file-input');
+                    const formData = new FormData(form);
+                    const downloadLink = document.getElementById('download-link');
+                    const format = document.getElementById('format-select').value.toLowerCase();
+
+                    const originalFilename = fileInput.files[0].name;
+                    const baseFilename = originalFilename.split('.').slice(0, -1).join('.');
+
+                    fetch('/convert', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.blob())
+                    .then(blob => {
+                        const url = URL.createObjectURL(blob);
+                        downloadLink.href = url;
+                        downloadLink.download = `${baseFilename}.${format}`;
+                        downloadLink.style.display = 'block';
+                        downloadLink.innerText = `Download ${baseFilename}.${format}`;
+                    })
+                    .catch(error => console.error('Error:', error));
+                }
+            </script>
+            <div class="file-source">
+                <span>Drop file(s) here. Maximum file size 50MB</span>
+            </div>
+            <div>
+                <button type="button" disabled class="download" style="display: initial;"><a id="download-link" style="display: none;">Download </a></button>
+            </div>
+
+            <div class="description">
+
+            </div>
+        </div>
+    </section>
+    <main class="main">
+        <div class="container"><h3>How to convert a file in 3 steps :)</h3></div>
+        <div class="container">
+            <h5 class="title1">Step 1</h5>
+            <p>Choose a file</p>
+        </div><div class="container">
+            <h5 class="title2">Step 2</h5>
+            <p>Choose the format "JPEG" "PNG" "SVG"...</p>
+        </div><div class="container">
+            <h5 class="title3">Step 3</h5>
+            <p>Push the convert button and <strong><i>Download!</i></strong></p>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <div class="foot-logo">
+                    <img src="../static/images/logo2.png" style="border-radius:30%" width="75px">
+                </div>
+                <div class="column">
+                    <h4 class="title">PixelPacker</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4 class="title">API</h4>
+                    <ul>
+                        <li><a href="#">API Developers</a></li>
+                        <li><a href="#">API Docs</a></li>
+                        <li><a href="#">CLI Docs</a></li>
+                    </ul>
+                </div>
+            </nav>
+             <div>
+                 <ul class="soc">
+                     <li><a href="https://x.com/msaniibrahim_"><i class="icon-x1"></i></a></li>
+                     <li><a href="https://linkedin.com/in/maman-sani-ibrahim"><i class="icon-linkedin"></i></a></li>
+                     <li><a href="https://github.com/Ibrahim227"><i class="icon-github"></i></a></li>
+                 </ul>
+                 <div class="copyright">
+                    <p>© 2024 PixelPacker<br>
+                        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+                    </p>
+                </div>
+             </div>
+        </div>
+    </footer>
+</body>
+</html>
