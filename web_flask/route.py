@@ -7,14 +7,11 @@ from PIL import Image
 from flask import Flask, request, send_file, make_response, url_for, redirect
 from flask import render_template
 
-from models import storage
 from models.user import User
 
 load_dotenv()
 
 app = Flask(__name__)
-
-storage.reload()
 
 
 @app.route('/', strict_slashes=False)
