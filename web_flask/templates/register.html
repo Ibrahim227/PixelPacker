@@ -29,23 +29,23 @@
     </div>
     <div class="registerbox">
         <h1>SIGN UP</h1>
-        <form>
+        <form action="/register" method="post">
             <label>First Name</label>
-            <input type="text" class="first-name" placeholder="Enter your first name" required maxlength="60">
+            <input class="first-name" maxlength="60" name="first_name" placeholder="Enter your first name" required
+                   type="text">
             <label>Last Name</label>
-            <input class="last-name" maxlength="60" placeholder="Enter your last name" required type="text">
+            <input class="last-name" name="last_name" maxlength="60" placeholder="Enter your last name" required type="text">
             <label>E-mail Address</label>
-            <input autofocus name="" placeholder="john@gmail.com" required type="text" value="">
+            <input autofocus name="email" placeholder="john@gmail.com" required type="text" value="">
             <label>Password</label>
-            <input name="" placeholder="Enter Password" required type="password" value="">
+            <input name="password" placeholder="Enter Password" required type="password" value="">
             <label>Country</label>
-            <input name="" placeholder="Enter country" type="text">
+            <input name="country" placeholder="Enter country" type="text">
             <label>Address</label>
-            <input name="" placeholder="Enter your address" type="text" value="">
+            <input name="address" placeholder="Enter your address" type="text" value="">
             <div class="inside-form">
                 <label for="telNo">Phone</label>
-                <input id="telNo" name="telNo" placeholder="Enter your number" required size="20" type="tel" value="">
-                <span class="validity"></span>
+                <input id="telNo" name="phone" placeholder="Enter your number" required size="20" type="tel" value="">
             </div>
             <div>
                 <input type="submit" name="" value="Submit">
