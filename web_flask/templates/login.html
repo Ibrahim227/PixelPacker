@@ -27,11 +27,11 @@
     <div class="loginbox">
         <img src="../static/images/logo2.png" class="avatar">
         <h1>SIGN IN</h1>
-        <form>
-            <p>Username or E-mail</p>
-            <input type="text" name="" placeholder="john@gmail.com" value="" required autofocus maxlength="60">
+        <form action="/login" method="post">
+            <p>E-mail</p>
+            <input autofocus maxlength="60" name="email" placeholder="john@gmail.com" required type="text" value="">
             <p>Password</p>
-            <input type="password" name="" placeholder="Enter Password" value="" required>
+            <input type="password" name="password" placeholder="Enter Password" value="" required>
             <input type="submit" name="" value="Login">
             <a href="#" class="f">Forgot your password?</a><br>
             <a href="{{ url_for('register') }}">Create a new account</a><br>
