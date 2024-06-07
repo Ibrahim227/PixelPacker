@@ -1,12 +1,20 @@
 #!/usr/bin/python3
 """Import required libraries/modules"""
 import io
+from dotenv import load_dotenv
 
 from PIL import Image
-from flask import Flask, request, send_file, make_response
+from flask import Flask, request, send_file, make_response, url_for, redirect
 from flask import render_template
 
+from models import storage
+from models.user import User
+
+load_dotenv()
+
 app = Flask(__name__)
+
+storage.reload()
 
 
 @app.route('/', strict_slashes=False)
@@ -59,7 +67,25 @@ def home():
 
 @app.route('/register/', strict_slashes=False, methods=['GET', 'POST'])
 def register():
+    if request.method == 'POST':
+        first_name = request.form['first_name']
+        last_name = request.form['last_name']
+        email = request.form['email']
+        password = request.form['password']
+        phone = request.form['phone']
+        address = request.form['address']
+
+        new_user = User(first_name=first_name, last_name=last_name, email=email, password=password, phone=phone,
+                        address=address)
+        storage.new(new_user)
+        storage.save()
+        return redirect(url_for('success'))
     return render_template('register.html')
+
+
+@app.route('/success')
+def success():
+    return "Registration successful!"
 
 
 if __name__ == '__main__':
