@@ -7,7 +7,6 @@ from PIL import Image
 from flask import Flask, request, send_file, make_response, url_for, redirect
 from flask import render_template
 
-from models.user import User
 
 load_dotenv()
 
@@ -74,8 +73,6 @@ def register():
 
         new_user = User(first_name=first_name, last_name=last_name, email=email, password=password, phone=phone,
                         address=address)
-        storage.new(new_user)
-        storage.save()
         return redirect(url_for('success'))
     return render_template('register.html')
 
