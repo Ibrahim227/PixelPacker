@@ -45,25 +45,16 @@
         <div class="container">
             <h1>PixelPacker</h1>
             <p><strong>Intelligent Image Compression Algorithm</strong></p>
-            <form id="upload-form" enctype="multipart/form-data">
-                <input type="file" id="file-input" name="file" accept="image/*" class="btn btn--blue" multiple>
-                <select id="format-select" name="format" class="choice-from">
+            <form action="{{ url_for('convert_image') }}" enctype="multipart/form-data" id="upload-form" method="post">
+                <input accept="image/*" class="btn btn--blue" id="file-input" multiple name="file" required type="file">
+                <select class="choice-from" id="format-select" name="format" required>
                     <option value="JPEG">JPEG</option>
                     <option value="PNG">PNG</option>
                     <option value="ICO">ICO</option>
                     <option value="BMP">BMP</option>
                     <option value="GIF">GIF</option>
-                    <option value="MAP">MAP</option>
-                    <option value="JP2">JP2</option>
-                    <option value="DNG">DNG</option>
-                    <option value="HEIC">HEIC</option>
-                    <option value="PALM">PALM</option>
-                    <option value="RGBA">RGBA</option>
-                    <option value="RGBO">RGBO</option>
                     <option value="SVG">SVG</option>
                     <option value="WEBP">WEBP</option>
-                    <option value="WBMP">WBMP</option>
-                    <option value="WPG">WPG</option>
                     <option value="HEIF">HEIF</option>
                 </select>
                 <button type="button" class="btn btn--green" onclick="uploadAndConvert()">Convert</button>
@@ -74,6 +65,9 @@
                     const fileInput = document.getElementById('file-input');
                     const formData = new FormData(form);
                     const downloadLink = document.getElementById('download-link');
+                    const fileSizeDisplay = document.getElementById('file-sizes');
+                    const originalSizeElement = document.getElementById('original-size');
+                    const convertedSizeElement = document.getElementById('converted-size');
                     const format = document.getElementById('format-select').value.toLowerCase();
 
                     const originalFilename = fileInput.files[0].name;
@@ -83,7 +77,17 @@
                         method: 'POST',
                         body: formData
                     })
-                    .then(response => response.blob())
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        const originalSize = response.headers.get('X-Original-Size');
+                        const convertedSize = response.headers.get('X-Converted-Size');
+                        originalSizeElement.innerText = `${originalSize} bytes`;
+                        convertedSizeElement.innerText = `${convertedSize} bytes`;
+                        fileSizeDisplay.style.display = 'block';
+                        return response.blob();
+                    })
                     .then(blob => {
                         const url = URL.createObjectURL(blob);
                         downloadLink.href = url;
@@ -95,14 +99,15 @@
                 }
             </script>
             <div class="file-source">
-                <span>Drop file(s) here. Maximum file size 50MB</span>
+                <span>Drop file here.</span>
             </div>
             <div>
-                <button type="button" disabled class="download" style="display: initial;"><a id="download-link" style="display: none;">Download </a></button>
+                <button type="button" disabled class="download" style="display:;"><a id="download-link" style="display: none;">Download </a></button>
             </div>
 
-            <div class="description">
-
+            <div id="file-sizes" style="display: none;" class="label-div">
+                <label class="label-original">Original File Size: <span id="original-size"></span> | </label>
+                <label class="label-converted">Converted File Size: <span id="converted-size"></span></label>
             </div>
         </div>
     </section>
