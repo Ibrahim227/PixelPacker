@@ -4,7 +4,6 @@ from os import getenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-import models
 from models.address import Address
 from models.compressedimages import CompressedImages
 from models.compressionparameters import CompressionParameters
@@ -76,7 +75,7 @@ class DBStorage:
 
     def get(self, cls, id):
         """returns the object"""
-        all_cls = models.storage.all(cls)
+        all_cls = self.all(cls)
         for value in all_cls.values():
             if value.id == id:
                 return value
@@ -90,8 +89,8 @@ class DBStorage:
         if not cls:
             count = 0
             for cla in all_classes:
-                count += len(models.storage.all(cla).values())
+                count += len(self.all(cla).values())
         else:
-            count = len(models.storage.all(cls).values())
+            count = len(self.all(cls).values())
 
         return count
