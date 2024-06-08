@@ -183,6 +183,9 @@ body {
     background-color: lightgreen;
 
 }
+.hero div .label-original {
+    text-color: red;
+}
 .btn {
     display: inline-block;
     border-radius: 15px;
@@ -312,4 +315,13 @@ body {
 }
 .copyright a {
     color: var(--gray-200);
+}
+
+.hero div .label-div {
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+    text-shadow: 1px 1px lightgreen;
+    text-size: 100;
+    background-color: #000000;
 }
