@@ -59,6 +59,9 @@
                 </select>
                 <button type="button" class="btn btn--green" onclick="uploadAndConvert()">Convert</button>
             </form>
+            <!-- This function ensures a seamless process for the user to upload an image,
+            convert it to the desired format, and see both the original and converted file sizes
+            before downloading the converted image.-->
             <script>
                 function uploadAndConvert() {
                     const form = document.getElementById('upload-form');
@@ -104,7 +107,6 @@
             <div>
                 <button type="button" disabled class="download" style="display:;"><a id="download-link" style="display: none;">Download </a></button>
             </div>
-
             <div id="file-sizes" style="display: none;" class="label-div">
                 <label class="label-original">Original File Size: <span id="original-size"></span> | </label>
                 <label class="label-converted">Converted File Size: <span id="converted-size"></span></label>
