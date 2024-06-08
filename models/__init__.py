@@ -1,4 +1,6 @@
-from models.engine.db_storage import DBStorage
-
-storage = DBStorage()
-storage.reload()
+# from models.engine.db_storage import DBStorage
+#
+# storage = DBStorage()
+# storage.reload()
+# def storage():
+#     return None
