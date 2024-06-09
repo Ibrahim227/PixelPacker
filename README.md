@@ -2,7 +2,7 @@
 <p> Intelligent Image Compression Algorithm</p>
 How to use?
 
->>python3 web_flask/route.py
+>python3 web_flask/route.py
 
 <br>
 <img src="img.png">
