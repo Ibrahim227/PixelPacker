@@ -19,4 +19,6 @@ You will see something like this:
 <p>2-Choose the format and</p> 
 <p>2-Click the <strong>Convert</strong> button.</p>
 
-
+<h2>Step 4:</h2>
+<img src="img_1.png">
+<p>The <strong>Download</strong> Button will appear after conversion.</p>
