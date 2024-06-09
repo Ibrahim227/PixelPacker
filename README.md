@@ -1,8 +1,10 @@
 ### PixelPacker
 <img src="img_2.png" alt="PixelPacker">
-<p> Intelligent Image Compression Algorithm</p>
-How to use?
+<br>
+
+<h1>How to use?</h1>
 <h2>Step 1:</h2>
+
 >python3 web_flask/route.py
 
 <br>
@@ -10,9 +12,11 @@ You will see:
 <img src="img.png">
 <h2>Step 2:</h2>
 
->click on http://localhost:5000
+>click on <http://localhost:5000>
 
-You will see something like this:
+<br>
+You will see something like this opened on with your default:
+
 <img src="Capture53.JPG">
 
 <h2>Step 3:</h2>
