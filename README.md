@@ -1,4 +1,5 @@
 ### PixelPacker
+<img src="img_2.png" alt="PixelPacker">
 <p> Intelligent Image Compression Algorithm</p>
 How to use?
 <h2>Step 1:</h2>
