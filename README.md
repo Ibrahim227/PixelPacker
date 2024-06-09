@@ -15,7 +15,7 @@ You will see:
 >click on <http://localhost:5000>
 
 <br>
-You will see something like this opened on with your default:
+You will see something like this opened with your default:
 
 <img src="Capture53.JPG">
 
