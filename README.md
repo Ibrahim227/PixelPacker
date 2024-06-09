@@ -5,6 +5,7 @@ How to use?
 >python3 web_flask/route.py
 
 <br>
+You will see: 
 <img src="img.png">
 
 >click on http://localhost:5000
