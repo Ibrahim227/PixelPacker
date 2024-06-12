@@ -21,10 +21,9 @@ You will see something like this opened with your default browser:
 
 <h2>Step 3:</h2>
 <ol>
-
-<p>1- Choose a file from your files</p>
-<p>2- Choose the format to convert to and,</p> 
-<p>3- Click the <strong>Convert</strong> button.</p>
+    <p>1- Choose a file from your files</p>
+    <p>2- Choose the format to convert to and,</p> 
+    <p>3- Click the <strong>Convert</strong> button.</p>
 </ol>
 
 <h2>Step 4:</h2>
