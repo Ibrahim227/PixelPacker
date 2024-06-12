@@ -20,9 +20,12 @@ You will see something like this opened with your default browser:
 <img src="Capture53.JPG">
 
 <h2>Step 3:</h2>
-<p>1-Choose a file from your files</p>
-<p>2-Choose the format and</p> 
-<p>2-Click the <strong>Convert</strong> button.</p>
+<ol>
+
+<p>1- Choose a file from your files</p>
+<p>2- Choose the format to convert to and,</p> 
+<p>3- Click the <strong>Convert</strong> button.</p>
+</ol>
 
 <h2>Step 4:</h2>
 <img src="img_1.png">
