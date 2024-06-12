@@ -1,5 +1,5 @@
 <h1>PixelPacker</h1>
-<img src="img_2.png" alt="PixelPacker">
+<img src="img_2.png">
 <br>
 
 <h1>How it Works?</h1>
