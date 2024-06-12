@@ -30,3 +30,6 @@ You will see something like this opened with your default browser:
 <h2>Step 4:</h2>
 <img src="img_1.png">
 <p>The <strong>Download</strong> Button will appear after conversion is complete. You'll notice at the same time the <strong>File Size</strong> before and after conversion.</p>
+
+<br>
+<h3>Author</h3>
