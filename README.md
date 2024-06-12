@@ -2,7 +2,7 @@
 <img src="img_2.png" alt="PixelPacker">
 <br>
 
-<h1>How to use Locally?</h1>
+<h1>How it Works?</h1>
 <h2>Step 1:</h2>
 
 >python3 web_flask/route.py
