@@ -5,18 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2b8b027-c152-41e5-a474-2f4aa85a8353" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Ibrahim227/.idea/Ibrahim227.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ibrahim227/.idea/Ibrahim227.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ibrahim227/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ibrahim227/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ibrahim227/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ibrahim227/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ibrahim227/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ibrahim227/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Ibrahim227/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ibrahim227/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PixelPacker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PixelPacker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_static/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web_static/styles/static_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_flask/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_flask/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recruit-test/script/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../recruit-test/script/.env" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Unit Test" />
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../recruit-test" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -31,6 +47,9 @@
     &quot;accountId&quot;: &quot;5985723a-0876-43db-8254-3fad81a371ec&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/web_flask/templates/register.html" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -44,16 +63,36 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.address.executor&quot;: &quot;Run&quot;,
+    &quot;Python.base_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python.choosefile.executor&quot;: &quot;Run&quot;,
+    &quot;Python.compressedimages.executor&quot;: &quot;Run&quot;,
+    &quot;Python.compressionparameters.executor&quot;: &quot;Run&quot;,
+    &quot;Python.db_storage.executor&quot;: &quot;Run&quot;,
+    &quot;Python.images.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.route.executor&quot;: &quot;Run&quot;,
+    &quot;Python.user.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Maman Sani Ibrahim/Documents/GitHub/Ibrahim227&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Maman Sani Ibrahim/Documents/GitHub/Ibrahim227&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Maman Sani Ibrahim\Documents\GitHub\recruit-test\images" />
+      <recent name="C:\Users\Maman Sani Ibrahim\Documents\GitHub\PixelPacker" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Maman Sani Ibrahim\Documents\GitHub\recruit-test\script" />
+      <recent name="C:\Users\Maman Sani Ibrahim\Documents\GitHub\PixelPacker\web_static\new" />
+      <recent name="C:\Users\Maman Sani Ibrahim\Documents\GitHub\PixelPacker\web_flask\templates" />
       <recent name="C:\Users\Maman Sani Ibrahim\Documents\GitHub\PixelPacker\web_static" />
       <recent name="C:\Users\Maman Sani Ibrahim\Documents\GitHub\PixelPacker\web_flask\static" />
     </key>
@@ -75,5 +114,8 @@
       <updated>1716199943767</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
